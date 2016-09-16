@@ -1,0 +1,17 @@
+d:\users\user\documents\visual studio 2015\Projects\ShipManagement1\ShipManagement1\bin\Debug\ShipManagement1.exe.config
+d:\users\user\documents\visual studio 2015\Projects\ShipManagement1\ShipManagement1\bin\Debug\ShipManagement1.exe
+d:\users\user\documents\visual studio 2015\Projects\ShipManagement1\ShipManagement1\bin\Debug\ShipManagement1.pdb
+d:\users\user\documents\visual studio 2015\Projects\ShipManagement1\ShipManagement1\obj\Debug\ShipManagement1.csprojResolveAssemblyReference.cache
+d:\users\user\documents\visual studio 2015\Projects\ShipManagement1\ShipManagement1\obj\Debug\MainWindow.g.cs
+d:\users\user\documents\visual studio 2015\Projects\ShipManagement1\ShipManagement1\obj\Debug\App.g.cs
+d:\users\user\documents\visual studio 2015\Projects\ShipManagement1\ShipManagement1\obj\Debug\ShipManagement1_MarkupCompile.cache
+d:\users\user\documents\visual studio 2015\Projects\ShipManagement1\ShipManagement1\obj\Debug\ShipManagement1_MarkupCompile.lref
+d:\users\user\documents\visual studio 2015\Projects\ShipManagement1\ShipManagement1\obj\Debug\MainWindow.baml
+d:\users\user\documents\visual studio 2015\Projects\ShipManagement1\ShipManagement1\obj\Debug\ShipManagement1.g.resources
+d:\users\user\documents\visual studio 2015\Projects\ShipManagement1\ShipManagement1\obj\Debug\ShipManagement1.Properties.Resources.resources
+d:\users\user\documents\visual studio 2015\Projects\ShipManagement1\ShipManagement1\obj\Debug\ShipManagement1.csproj.GenerateResource.Cache
+d:\users\user\documents\visual studio 2015\Projects\ShipManagement1\ShipManagement1\obj\Debug\ShipManagement1.exe
+d:\users\user\documents\visual studio 2015\Projects\ShipManagement1\ShipManagement1\obj\Debug\ShipManagement1.pdb
+E:\פרוייקט אהוד 1\ShipManagement1\ShipManagement1\bin\Debug\ShipManagement1.exe.config
+E:\פרוייקט אהוד 1\ShipManagement1\ShipManagement1\obj\Debug\ShipManagement1.exe
+E:\פרוייקט אהוד 1\ShipManagement1\ShipManagement1\obj\Debug\ShipManagement1.pdb
