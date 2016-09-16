@@ -15,3 +15,6 @@ d:\users\user\documents\visual studio 2015\Projects\ShipManagement1\ShipManageme
 E:\פרוייקט אהוד 1\ShipManagement1\ShipManagement1\bin\Debug\ShipManagement1.exe.config
 E:\פרוייקט אהוד 1\ShipManagement1\ShipManagement1\obj\Debug\ShipManagement1.exe
 E:\פרוייקט אהוד 1\ShipManagement1\ShipManagement1\obj\Debug\ShipManagement1.pdb
+C:\Users\USER\Documents\GitHub\EhudProject\ShipManagement1\ShipManagement1\bin\Debug\ShipManagement1.exe.config
+C:\Users\USER\Documents\GitHub\EhudProject\ShipManagement1\ShipManagement1\obj\Debug\ShipManagement1.exe
+C:\Users\USER\Documents\GitHub\EhudProject\ShipManagement1\ShipManagement1\obj\Debug\ShipManagement1.pdb
