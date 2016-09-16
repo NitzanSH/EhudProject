@@ -17,6 +17,7 @@ namespace ShipManagement1
         private string currency;
         private bool payed;
         private string id;
+
         public Shipment(string id, Address from, Address to, Date recieveDate, Date deliverDate, double sum,
             string currency, bool payed)
         {
@@ -29,6 +30,7 @@ namespace ShipManagement1
             this.payed = payed;
             this.id = id;
         }
+
         public Shipment(Shipment s)
         {
             if (s != null)
@@ -51,6 +53,7 @@ namespace ShipManagement1
             }
         }
 
+        #region Get and Set
         public Address From
         {
             get { return from; }
@@ -91,8 +94,9 @@ namespace ShipManagement1
             get { return id; }
             set { id = value; }
         }
+        #endregion
 
-
+        #region Read and Write the XML file
         public static void WriteShipment(Shipment ship, XmlWriter writer)
         {
             writer.WriteStartElement("Shipment");
@@ -174,5 +178,7 @@ namespace ShipManagement1
             }
             return new Shipment(id, from, to, recieveDate, deliverDate, sum, currency, payed);
         }
+
+        #endregion
     }
 }

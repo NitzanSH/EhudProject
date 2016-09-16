@@ -51,11 +51,11 @@
                     <Label Content="Street:" Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="1" Grid.RowSpan="1"/>
                     <Label Content="House Num:" Grid.Column="0" Grid.Row="3" Grid.ColumnSpan="1" Grid.RowSpan="1"/>
                     <Label Content="Zip Code:" Grid.Column="0" Grid.Row="4" Grid.ColumnSpan="1" Grid.RowSpan="1"/>
-                    <TextBox Grid.Column="1" Grid.Row="0" Grid.ColumnSpan="1" Grid.RowSpan="1" IsEnabled="False"/>
-                    <TextBox Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="1" Grid.RowSpan="1" IsEnabled="False"/>
-                    <TextBox Grid.Column="1" Grid.Row="2" Grid.ColumnSpan="1" Grid.RowSpan="1" IsEnabled="False"/>
-                    <TextBox Grid.Column="1" Grid.Row="3" Grid.ColumnSpan="1" Grid.RowSpan="1" IsEnabled="False"/>
-                    <TextBox Grid.Column="1" Grid.Row="4" Grid.ColumnSpan="1" Grid.RowSpan="1" IsEnabled="False"/>
+                    <TextBox Name="FromCountry" Grid.Column="1" Grid.Row="0" Grid.ColumnSpan="1" Grid.RowSpan="1" IsEnabled="False"/>
+                    <TextBox Name="FromCity" Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="1" Grid.RowSpan="1" IsEnabled="False"/>
+                    <TextBox Name="FromStreet" Grid.Column="1" Grid.Row="2" Grid.ColumnSpan="1" Grid.RowSpan="1" IsEnabled="False"/>
+                    <TextBox Name="FromHouseNum" Grid.Column="1" Grid.Row="3" Grid.ColumnSpan="1" Grid.RowSpan="1" IsEnabled="False"/>
+                    <TextBox Name="FromZipCode" Grid.Column="1" Grid.Row="4" Grid.ColumnSpan="1" Grid.RowSpan="1" IsEnabled="False"/>
                 </Grid>
                 <Grid Grid.Column="1" Grid.Row="0" Grid.ColumnSpan="1" Grid.RowSpan="1">
                     <Grid.ColumnDefinitions>
@@ -74,11 +74,11 @@
                     <Label Content="Street:" Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="1" Grid.RowSpan="1"/>
                     <Label Content="House Num:" Grid.Column="0" Grid.Row="3" Grid.ColumnSpan="1" Grid.RowSpan="1"/>
                     <Label Content="Zip Code:" Grid.Column="0" Grid.Row="4" Grid.ColumnSpan="1" Grid.RowSpan="1"/>
-                    <TextBox Grid.Column="1" Grid.Row="0" Grid.ColumnSpan="1" Grid.RowSpan="1" IsEnabled="False"/>
-                    <TextBox Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="1" Grid.RowSpan="1" IsEnabled="False"/>
-                    <TextBox Grid.Column="1" Grid.Row="2" Grid.ColumnSpan="1" Grid.RowSpan="1" IsEnabled="False"/>
-                    <TextBox Grid.Column="1" Grid.Row="3" Grid.ColumnSpan="1" Grid.RowSpan="1" IsEnabled="False"/>
-                    <TextBox Grid.Column="1" Grid.Row="4" Grid.ColumnSpan="1" Grid.RowSpan="1" IsEnabled="False"/>
+                    <TextBox Name="ToCountry" Grid.Column="1" Grid.Row="0" Grid.ColumnSpan="1" Grid.RowSpan="1" IsEnabled="False"/>
+                    <TextBox Name="ToCity" Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="1" Grid.RowSpan="1" IsEnabled="False"/>
+                    <TextBox Name="ToStreet" Grid.Column="1" Grid.Row="2" Grid.ColumnSpan="1" Grid.RowSpan="1" IsEnabled="False"/>
+                    <TextBox Name="ToHouseNum" Grid.Column="1" Grid.Row="3" Grid.ColumnSpan="1" Grid.RowSpan="1" IsEnabled="False"/>
+                    <TextBox Name="ToZipCode" Grid.Column="1" Grid.Row="4" Grid.ColumnSpan="1" Grid.RowSpan="1" IsEnabled="False"/>
                 </Grid>
                 <Grid Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="2" Grid.RowSpan="1">
                     <Grid.ColumnDefinitions>
@@ -96,11 +96,11 @@
                     <Label Content="Deliver Date:" Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="1" Grid.RowSpan="1"/>
                     <Label Content="Sum:" Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="1" Grid.RowSpan="1"/>
                     <Label Content="Currency:" Grid.Column="0" Grid.Row="3" Grid.ColumnSpan="1" Grid.RowSpan="1"/>
-                    <TextBox Grid.Column="1" Grid.Row="0" Grid.ColumnSpan="1" Grid.RowSpan="1" IsEnabled="False"/>
-                    <TextBox Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="1" Grid.RowSpan="1" IsEnabled="False"/>
-                    <TextBox Grid.Column="1" Grid.Row="2" Grid.ColumnSpan="1" Grid.RowSpan="1" IsEnabled="False"/>
-                    <TextBox Grid.Column="1" Grid.Row="3" Grid.ColumnSpan="1" Grid.RowSpan="1" IsEnabled="False"/>
-                    <Grid Grid.Column="0" Grid.Row="4" Grid.ColumnSpan="1" Grid.RowSpan="1">
+                    <TextBox Name="RecDate" Grid.Column="1" Grid.Row="0" Grid.ColumnSpan="1" Grid.RowSpan="1" IsEnabled="False"/>
+                    <TextBox Name="DelDate" Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="1" Grid.RowSpan="1" IsEnabled="False"/>
+                    <TextBox Name="Sum" Grid.Column="1" Grid.Row="2" Grid.ColumnSpan="1" Grid.RowSpan="1" IsEnabled="False"/>
+                    <TextBox Name="Currency" Grid.Column="1" Grid.Row="3" Grid.ColumnSpan="1" Grid.RowSpan="1" IsEnabled="False"/>
+                    <Grid  Grid.Column="0" Grid.Row="4" Grid.ColumnSpan="1" Grid.RowSpan="1">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="1*"/>
                             <ColumnDefinition Width="4*"/>
@@ -109,7 +109,7 @@
                         <Label Content=" Payed" Grid.Column="1" Grid.Row="0" Grid.ColumnSpan="1" Grid.RowSpan="1"/>
 
                     </Grid>
-                    <CheckBox Grid.Column="0" Grid.Row="4" Grid.ColumnSpan="1" Grid.RowSpan="1"/>
+                    <CheckBox Name="Payed" Grid.Column="0" Grid.Row="4" Grid.ColumnSpan="1" Grid.RowSpan="1"/>
                 </Grid>
             </Grid>
         </GroupBox>

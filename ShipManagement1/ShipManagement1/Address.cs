@@ -14,6 +14,7 @@ namespace ShipManagement1
         private string street;
         private int houseNumber;
         private int zipCode;
+
         public Address(string country, string city, string street, int houseNumber, int zipCode)
         {
             this.country = country;
@@ -22,6 +23,7 @@ namespace ShipManagement1
             this.houseNumber = houseNumber;
             this.zipCode = zipCode;
         }
+
         public Address(Address o)
         {
             if (o != null)
@@ -34,6 +36,7 @@ namespace ShipManagement1
             }
         }
 
+        #region Gets and Sets
         public string Country
         {
             get { return country; }
@@ -59,7 +62,9 @@ namespace ShipManagement1
             get { return zipCode; }
             set { zipCode = value; }
         }
-
+        #endregion
+     
+        #region Read and Write
         public static Address ReadAddress(XmlReader xmlReader)
         {
             string country = "", city = "", street = "";
@@ -112,6 +117,8 @@ namespace ShipManagement1
             writer.WriteEndElement();
 
         }
+
+        #endregion
 
     }
 }

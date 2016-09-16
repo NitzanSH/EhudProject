@@ -18,3 +18,14 @@ E:\פרוייקט אהוד 1\ShipManagement1\ShipManagement1\obj\Debug\ShipManag
 C:\Users\USER\Documents\GitHub\EhudProject\ShipManagement1\ShipManagement1\bin\Debug\ShipManagement1.exe.config
 C:\Users\USER\Documents\GitHub\EhudProject\ShipManagement1\ShipManagement1\obj\Debug\ShipManagement1.exe
 C:\Users\USER\Documents\GitHub\EhudProject\ShipManagement1\ShipManagement1\obj\Debug\ShipManagement1.pdb
+C:\Users\USER\Documents\GitHub\EhudProject\ShipManagement1\ShipManagement1\bin\Debug\ShipManagement1.exe
+C:\Users\USER\Documents\GitHub\EhudProject\ShipManagement1\ShipManagement1\bin\Debug\ShipManagement1.pdb
+C:\Users\USER\Documents\GitHub\EhudProject\ShipManagement1\ShipManagement1\obj\Debug\ShipManagement1.csprojResolveAssemblyReference.cache
+C:\Users\USER\Documents\GitHub\EhudProject\ShipManagement1\ShipManagement1\obj\Debug\MainWindow.g.cs
+C:\Users\USER\Documents\GitHub\EhudProject\ShipManagement1\ShipManagement1\obj\Debug\App.g.cs
+C:\Users\USER\Documents\GitHub\EhudProject\ShipManagement1\ShipManagement1\obj\Debug\ShipManagement1_MarkupCompile.cache
+C:\Users\USER\Documents\GitHub\EhudProject\ShipManagement1\ShipManagement1\obj\Debug\ShipManagement1_MarkupCompile.lref
+C:\Users\USER\Documents\GitHub\EhudProject\ShipManagement1\ShipManagement1\obj\Debug\MainWindow.baml
+C:\Users\USER\Documents\GitHub\EhudProject\ShipManagement1\ShipManagement1\obj\Debug\ShipManagement1.g.resources
+C:\Users\USER\Documents\GitHub\EhudProject\ShipManagement1\ShipManagement1\obj\Debug\ShipManagement1.Properties.Resources.resources
+C:\Users\USER\Documents\GitHub\EhudProject\ShipManagement1\ShipManagement1\obj\Debug\ShipManagement1.csproj.GenerateResource.Cache
