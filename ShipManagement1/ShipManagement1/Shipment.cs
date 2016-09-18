@@ -17,9 +17,12 @@ namespace ShipManagement1
         private string currency;
         private bool payed;
         private string id;
+        private string deliveryDateString;
+        private string recieveDateString;
+
 
         public Shipment(string id, Address from, Address to, Date recieveDate, Date deliverDate, double sum,
-            string currency, bool payed)
+            string currency, bool payed, string deliveryDateString, string recieveDateString)
         {
             this.from = from;
             this.to = to;
@@ -29,6 +32,8 @@ namespace ShipManagement1
             this.currency = currency;
             this.payed = payed;
             this.id = id;
+            this.recieveDateString = recieveDateString;
+            this.deliveryDateString = deliveryDateString;
         }
 
         public Shipment(Shipment s)
@@ -125,7 +130,7 @@ namespace ShipManagement1
             double sum = 0;
             bool payed = false;
             string id = null;
-            String currency = "";
+            String currency = "", deliveryDateString = "", recieveDateString = "";
             XmlReader subTree;
 
             while (xmlReader.Read())
@@ -153,11 +158,15 @@ namespace ShipManagement1
                     {
                         subTree = xmlReader.ReadSubtree();
                         recieveDate = Date.ReadDate(subTree);
+                        recieveDateString = recieveDate.Day.ToString() + "/" +
+                            recieveDate.Month.ToString() + "/" + recieveDate.Year.ToString();
                     }
                     else if (element.Equals("deliverDate"))
                     {
                         subTree = xmlReader.ReadSubtree();
                         deliverDate = Date.ReadDate(subTree);
+                        deliveryDateString = deliverDate.Day.ToString() + "/" +
+                            deliverDate.Month.ToString() + "/" + deliverDate.Year.ToString();
                     }
                     else if (element.Equals("sum"))
                     {
@@ -168,15 +177,22 @@ namespace ShipManagement1
                     {
                         xmlReader.Read();
                         payed = bool.Parse(xmlReader.Value);
+                        break;
                     }
                     else if (element.Equals("currency"))
                     {
                         xmlReader.Read();
                         currency = xmlReader.Value;
                     }
+                    else if (element.Equals("Shipment"))
+                    {
+                        
+                    }
                 }
             }
-            return new Shipment(id, from, to, recieveDate, deliverDate, sum, currency, payed);
+
+            return new Shipment(id, from, to, recieveDate, deliverDate, sum, currency, payed, deliveryDateString, recieveDateString);
+
         }
 
         #endregion

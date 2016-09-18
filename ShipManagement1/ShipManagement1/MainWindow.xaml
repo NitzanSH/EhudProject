@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ShipManagement1"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="MainWindow" Height="350" Width="525" Closing="Window_Closing">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="1*"/>
@@ -16,16 +16,18 @@
             <RowDefinition Height="8*"/>
             <RowDefinition Height="1*"/>
         </Grid.RowDefinitions>
+        
         <ListBox x:Name="ShipsLB" Grid.Row="1" 
-			VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+			VerticalAlignment="Stretch" HorizontalAlignment="Stretch" SelectionChanged="ShipsLB_SelectionChanged_1">
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <TextBlock Text="{Binding ID}" />
                 </DataTemplate>
             </ListBox.ItemTemplate>
         </ListBox>
-        <GroupBox Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="1" Grid.RowSpan="1">
-            <Grid>
+        <TextBox Name="Id" Text="{Binding ID}" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="1" Grid.RowSpan="1" />
+        <GroupBox Name="ShipGB"  Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="1" Grid.RowSpan="1">
+            <Grid Name="Grida">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="1*"/>
                     <ColumnDefinition Width="1*" />
@@ -51,11 +53,11 @@
                     <Label Content="Street:" Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="1" Grid.RowSpan="1"/>
                     <Label Content="House Num:" Grid.Column="0" Grid.Row="3" Grid.ColumnSpan="1" Grid.RowSpan="1"/>
                     <Label Content="Zip Code:" Grid.Column="0" Grid.Row="4" Grid.ColumnSpan="1" Grid.RowSpan="1"/>
-                    <TextBox Name="FromCountry" Grid.Column="1" Grid.Row="0" Grid.ColumnSpan="1" Grid.RowSpan="1" IsEnabled="False"/>
-                    <TextBox Name="FromCity" Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="1" Grid.RowSpan="1" IsEnabled="False"/>
-                    <TextBox Name="FromStreet" Grid.Column="1" Grid.Row="2" Grid.ColumnSpan="1" Grid.RowSpan="1" IsEnabled="False"/>
-                    <TextBox Name="FromHouseNum" Grid.Column="1" Grid.Row="3" Grid.ColumnSpan="1" Grid.RowSpan="1" IsEnabled="False"/>
-                    <TextBox Name="FromZipCode" Grid.Column="1" Grid.Row="4" Grid.ColumnSpan="1" Grid.RowSpan="1" IsEnabled="False"/>
+                    <TextBox Name="FromCountry" Text="{Binding From.Country}" Grid.Column="1" Grid.Row="0" Grid.ColumnSpan="1" Grid.RowSpan="1"/>
+                    <TextBox Name="FromCity" Text="{Binding From.City}" Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="1" Grid.RowSpan="1"/>
+                    <TextBox Name="FromStreet" Text="{Binding From.Street}" Grid.Column="1" Grid.Row="2" Grid.ColumnSpan="1" Grid.RowSpan="1"/>
+                    <TextBox Name="FromHouseNum" Text="{Binding From.HouseNumber}"  Grid.Column="1" Grid.Row="3" Grid.ColumnSpan="1" Grid.RowSpan="1"/>
+                    <TextBox Name="FromZipCode" Text="{Binding From.ZipCode}"  Grid.Column="1" Grid.Row="4" Grid.ColumnSpan="1" Grid.RowSpan="1"/>
                 </Grid>
                 <Grid Grid.Column="1" Grid.Row="0" Grid.ColumnSpan="1" Grid.RowSpan="1">
                     <Grid.ColumnDefinitions>
@@ -74,16 +76,20 @@
                     <Label Content="Street:" Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="1" Grid.RowSpan="1"/>
                     <Label Content="House Num:" Grid.Column="0" Grid.Row="3" Grid.ColumnSpan="1" Grid.RowSpan="1"/>
                     <Label Content="Zip Code:" Grid.Column="0" Grid.Row="4" Grid.ColumnSpan="1" Grid.RowSpan="1"/>
-                    <TextBox Name="ToCountry" Grid.Column="1" Grid.Row="0" Grid.ColumnSpan="1" Grid.RowSpan="1" IsEnabled="False"/>
-                    <TextBox Name="ToCity" Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="1" Grid.RowSpan="1" IsEnabled="False"/>
-                    <TextBox Name="ToStreet" Grid.Column="1" Grid.Row="2" Grid.ColumnSpan="1" Grid.RowSpan="1" IsEnabled="False"/>
-                    <TextBox Name="ToHouseNum" Grid.Column="1" Grid.Row="3" Grid.ColumnSpan="1" Grid.RowSpan="1" IsEnabled="False"/>
-                    <TextBox Name="ToZipCode" Grid.Column="1" Grid.Row="4" Grid.ColumnSpan="1" Grid.RowSpan="1" IsEnabled="False"/>
+                    <TextBox Name="ToCountry" Text="{Binding To.Country}" Grid.Column="1" Grid.Row="0" Grid.ColumnSpan="1" Grid.RowSpan="1"/>
+                    <TextBox Name="ToCity" Text="{Binding To.City}" Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="1" Grid.RowSpan="1"/>
+                    <TextBox Name="ToStreet" Text="{Binding To.Street}" Grid.Column="1" Grid.Row="2" Grid.ColumnSpan="1" Grid.RowSpan="1"/>
+                    <TextBox Name="ToHouseNum" Text="{Binding To.HouseNumber}" Grid.Column="1" Grid.Row="3" Grid.ColumnSpan="1" Grid.RowSpan="1"/>
+                    <TextBox Name="ToZipCode" Text="{Binding To.ZipCode}" Grid.Column="1" Grid.Row="4" Grid.ColumnSpan="1" Grid.RowSpan="1"/>
                 </Grid>
                 <Grid Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="2" Grid.RowSpan="1">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="1*"/>
-                        <ColumnDefinition Width="3.3*"/>
+                        <ColumnDefinition Width="0.5*"/>
+                        <ColumnDefinition Width="0.3*"/>
+                        <ColumnDefinition Width="0.5*"/>
+                        <ColumnDefinition Width="0.3*"/>
+                        <ColumnDefinition Width="0.7*"/>
                     </Grid.ColumnDefinitions>
                     <Grid.RowDefinitions>
                         <RowDefinition Height="1*"/>
@@ -96,10 +102,18 @@
                     <Label Content="Deliver Date:" Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="1" Grid.RowSpan="1"/>
                     <Label Content="Sum:" Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="1" Grid.RowSpan="1"/>
                     <Label Content="Currency:" Grid.Column="0" Grid.Row="3" Grid.ColumnSpan="1" Grid.RowSpan="1"/>
-                    <TextBox Name="RecDate" Grid.Column="1" Grid.Row="0" Grid.ColumnSpan="1" Grid.RowSpan="1" IsEnabled="False"/>
-                    <TextBox Name="DelDate" Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="1" Grid.RowSpan="1" IsEnabled="False"/>
-                    <TextBox Name="Sum" Grid.Column="1" Grid.Row="2" Grid.ColumnSpan="1" Grid.RowSpan="1" IsEnabled="False"/>
-                    <TextBox Name="Currency" Grid.Column="1" Grid.Row="3" Grid.ColumnSpan="1" Grid.RowSpan="1" IsEnabled="False"/>
+                    <TextBox Name="RecDay" Text="{Binding RecieveDate.Day}"  Grid.Column="1" Grid.Row="0" Grid.ColumnSpan="1" Grid.RowSpan="1" FontSize="18"/>
+                    <TextBlock Text="    /" Grid.Column="2" Grid.Row="0" Grid.ColumnSpan="1" Grid.RowSpan="1"/>
+                    <TextBox Name="RecMonth" Text="{Binding RecieveDate.Month}" Grid.Column="3" Grid.Row="0" Grid.ColumnSpan="1" Grid.RowSpan="1"/>
+                    <TextBlock Text="    /" Grid.Column="4" Grid.Row="0" Grid.ColumnSpan="1" Grid.RowSpan="1"/>
+                    <TextBox Name="RecYear" Text="{Binding RecieveDate.Year}" Grid.Column="5" Grid.Row="0" Grid.ColumnSpan="1" Grid.RowSpan="1"/>
+                    <TextBox Name="DelDay" Text="{Binding DeliverDate.Day}"  Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="1" Grid.RowSpan="1" FontSize="18"/>
+                    <TextBlock Text="    /" Grid.Column="2" Grid.Row="1" Grid.ColumnSpan="1" Grid.RowSpan="1"/>
+                    <TextBox Name="DelMonth" Text="{Binding DeliverDate.Month}" Grid.Column="3" Grid.Row="1" Grid.ColumnSpan="1" Grid.RowSpan="1"/>
+                    <TextBlock Text="    /" Grid.Column="4" Grid.Row="1" Grid.ColumnSpan="1" Grid.RowSpan="1"/>
+                    <TextBox Name="DelYear" Text="{Binding DeliverDate.Year}" Grid.Column="5" Grid.Row="1" Grid.ColumnSpan="1" Grid.RowSpan="1"/>
+                    <TextBox Name="Sum" Text="{Binding Sum}" Grid.Column="1" Grid.Row="2" Grid.ColumnSpan="2" Grid.RowSpan="1"/>
+                    <TextBox Name="Currency" Text="{Binding Currency}" Grid.Column="1" Grid.Row="3" Grid.ColumnSpan="2" Grid.RowSpan="1"/>
                     <Grid  Grid.Column="0" Grid.Row="4" Grid.ColumnSpan="1" Grid.RowSpan="1">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="1*"/>
@@ -109,7 +123,7 @@
                         <Label Content=" Payed" Grid.Column="1" Grid.Row="0" Grid.ColumnSpan="1" Grid.RowSpan="1"/>
 
                     </Grid>
-                    <CheckBox Name="Payed" Grid.Column="0" Grid.Row="4" Grid.ColumnSpan="1" Grid.RowSpan="1"/>
+                    <CheckBox Name="Payed" IsChecked="{Binding Payed}" Grid.Column="0" Grid.Row="4" Grid.ColumnSpan="1" Grid.RowSpan="1"/>
                 </Grid>
             </Grid>
         </GroupBox>
@@ -127,8 +141,8 @@
                 <ColumnDefinition Width="1*"/>
                 <ColumnDefinition Width="1*"/>
             </Grid.ColumnDefinitions>
-            <Button Name="New" Content="New" Grid.Column="1" Click="New_Click"/>
-            <Button Name="Edit" Content="Edit" Grid.Column="0" Click="Edit_Click"/>
+            <Button Name="NewBTN" Content="New" Grid.Column="1" Click="New_Click"/>
+            <Button Name="EditBTN" Content="Edit" Grid.Column="0" Click="Edit_Click" IsEnabled="False"/>
         </Grid>
         <Grid Grid.Column="1" Grid.Row="2" Grid.ColumnSpan="1" Grid.RowSpan="1">
             <Grid.ColumnDefinitions>
@@ -139,8 +153,8 @@
                 <ColumnDefinition Width="1*"/>
                 <ColumnDefinition Width="1*"/>
             </Grid.ColumnDefinitions>
-            <Button Name="Cancel" Content="Cancel" Grid.Column="3" Click="New_Click"/>
-            <Button Name="Ok" Content="Ok" Grid.Column="2" Click="Edit_Click"/>
+            <Button Name="CancelBTN" Content="Cancel" Grid.Column="3" Click="CancelBTN_Click" IsEnabled="False"/>
+            <Button Name="OkBTN" Content="Ok" Grid.Column="2" Click="OkBTN_Click" IsEnabled="False" Height="32" VerticalAlignment="Bottom"/>
         </Grid>
     </Grid>
 </Window>
